@@ -1,0 +1,30 @@
+[
+  {
+    "request": "показати мої замовлення",
+    "expected_fraud": false
+  },
+  {
+    "request": "' OR 1=1 --",
+    "expected_fraud": true
+  },
+  {
+    "request": "пошук товарів",
+    "expected_fraud": false
+  },
+  {
+    "request": "<script>alert('xss')</script>",
+    "expected_fraud": true
+  },
+  {
+    "request": "змінити пароль",
+    "expected_fraud": false
+  },
+  {
+    "request": "../admin/config.php",
+    "expected_fraud": true
+  },
+  {
+    "request": "контактна інформація",
+    "expected_fraud": false
+  }
+]
